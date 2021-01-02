@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Administrator Master Page</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            Hello 
+            <h:outputText value="#{AdministratorAccount.first_name}"/>
+            <h:outputText value="&#160;" />
+            <h:outputText value="#{AdministratorAccount.last_name}"/>
+
+            <br/>
+            <br/>
+
+            <h:commandLink id="studentAccountLink" action="StudentCreateAccountPage">
+                <h:outputText value="Create Student Account"/>
+            </h:commandLink>
+
+            <br/>
+
+            <h:commandLink id="instructorAccountLink" action="InstructorCreateAccountPage">
+                <h:outputText value="Create Instructor Account"/>
+            </h:commandLink>
+
+            <br/>
+
+            <h:commandLink id="courseLink" action="CourseCreatePage">
+                <h:outputText value="Create Courses"/>
+            </h:commandLink>
+        </h:form>
+
+    </h:body>
+</html>
+

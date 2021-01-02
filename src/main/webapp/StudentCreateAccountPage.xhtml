@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Student Account Creation</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:panelGrid columns="3">
+                <h:outputLabel value="UserName:"/>
+                <h:inputText id="username" required="true"
+                             requiredMessage="Username is required"
+                             validatorMessage="Name must have 1 to 10 chars"
+                             value="#{TempStudentAccount.user_name}">
+                    <f:validateLength minimum="1" maximum="10" />
+                </h:inputText>        
+                <h:message for="username" style="color:red"/>
+
+                <h:outputLabel value="Confirm UserName:"/>
+                <h:inputText id="confirmusername" required="true"
+                             requiredMessage="Username is required"
+                             validatorMessage="Name must have 1 to 10 chars"
+                             value="#{TempStudentAccount.user_nameConf}">
+                    <f:validateLength minimum="1" maximum="10" />
+                </h:inputText>        
+                <h:message for="confirmusername" style="color:red"/>
+
+                <h:outputLabel value="Password:"/>
+                <h:inputText id="password" required="true"
+                             requiredMessage="Password is required"
+                             validatorMessage="password must have 1 to 10 chars"
+                             value="#{TempStudentAccount.password}">
+                    <f:validateLength minimum="1" maximum="10" />
+                </h:inputText>        
+                <h:message for="password" style="color:red"/>
+
+                <h:outputLabel value="Confirm Password:"/>
+                <h:inputText id="confirmpassword" required="true"
+                             requiredMessage="Password is required"
+                             validatorMessage="password must have 1 to 10 chars"
+                             value="#{TempStudentAccount.passwordConf}">
+                    <f:validateLength minimum="1" maximum="10" />
+                </h:inputText>        
+                <h:message for="confirmpassword" style="color:red"/>
+
+                <h:outputLabel value="First Name:"/>
+                <h:inputText id="firstname" required="true"
+                             requiredMessage="First name is required"
+                             validatorMessage="First name must have 1 to 20 chars"
+                             value="#{TempStudentAccount.first_name}">
+                    <f:validateLength minimum="1" maximum="20" />
+                </h:inputText>        
+                <h:message for="firstname" style="color:red"/>
+
+                <h:outputLabel value="Last Name:"/>
+                <h:inputText id="lastname" required="true"
+                             requiredMessage="Last name is required"
+                             validatorMessage="Last name must have 1 to 20 chars"
+                             value="#{TempStudentAccount.last_name}">
+                    <f:validateLength minimum="1" maximum="20" />
+                </h:inputText>        
+                <h:message for="lastname" style="color:red"/>
+                
+                <h:outputLabel value="ID:"/>
+                <h:inputText id="idcode" required="true"
+                             requiredMessage="ID is required"
+                             validatorMessage="ID must have 4 chars"
+                             value="#{TempStudentAccount.id}">
+                    <f:validateLength minimum="4" maximum="4" />
+                </h:inputText>        
+                <h:message for="idcode" style="color:red"/>
+                
+            </h:panelGrid>
+
+            <h:commandButton value="Submit" action="#{TempStudentAccount.Registration()}" />
+        </h:form>
+    </h:body>
+</html>
+
